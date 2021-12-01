@@ -15,7 +15,7 @@
 ```bash
 name: 🔊 PR Ding Talk Notify
 
-on: pull_request
+on: [pull_request, issue_comment, pull_request_review_comment]
 
 # 如果不想频繁的收到提示, 可以只在PR打开的时候提示
 # on:

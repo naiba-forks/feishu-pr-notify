@@ -19,12 +19,15 @@ inputs:
     required: true
 
   repo_url:
+    required: false
     description: 'github pull request url'
 
   content:
+    required: false
     description: 'message content'
 
   at_all:
+    required: false
     description: 'at all users'
 
 #outputs:
@@ -34,3 +37,4 @@ inputs:
 runs:
   using: 'node12'
   main: 'dist/index.js'
+
