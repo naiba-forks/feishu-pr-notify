@@ -18497,7 +18497,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
-const FeishuRobot = __nccwpck_require__(9114);
+const { default: Bot } = __nccwpck_require__(9114);
 
 async function run() {
   try {
@@ -18509,13 +18509,12 @@ async function run() {
 
     const feishuBotToken = core.getInput('feishu_bot_token');
     const repoUrl = core.getInput('repo_url');
-    const atAll = core.getInput('at_all') || false;
 
     if (!feishuBotToken) {
       core.setFailed('Please set DingTalk access token!');
     }
 
-    const robot = new FeishuRobot(feishuBotToken);
+    const robot = new Bot(feishuBotToken);
 
     if (pr_review_comment || pr_comment) {
       const comment = pr_review_comment ? pr_review_comment : pr_comment;

@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const FeishuRobot = require('feishu-bot');
+const { default: Bot } = require('feishu-bot');
 
 async function run() {
   try {
@@ -12,13 +12,12 @@ async function run() {
 
     const feishuBotToken = core.getInput('feishu_bot_token');
     const repoUrl = core.getInput('repo_url');
-    const atAll = core.getInput('at_all') || false;
 
     if (!feishuBotToken) {
       core.setFailed('Please set DingTalk access token!');
     }
 
-    const robot = new FeishuRobot(feishuBotToken);
+    const robot = new Bot(feishuBotToken);
 
     if (pr_review_comment || pr_comment) {
       const comment = pr_review_comment ? pr_review_comment : pr_comment;

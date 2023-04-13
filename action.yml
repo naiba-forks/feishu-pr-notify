@@ -26,13 +26,6 @@ inputs:
     required: false
     description: 'message content'
 
-  at_all:
-    required: false
-    description: 'at all users'
-
-#outputs:
-#  result:
-#    description: action result
 
 runs:
   using: 'node12'
