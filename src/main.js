@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const FeishuRobot = require('feishu-robot');
+const FeishuRobot = require('feishu-bot');
 
 async function run() {
   try {
