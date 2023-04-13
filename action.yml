@@ -1,7 +1,7 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
-name: 'Ding Talk PR Notify'
-description: 'A ding talk pr notify of GitHub actions.'
-author: 'lijinke666'
+name: 'Feishu PR Notify'
+description: 'A Feishu pr notify of GitHub actions.'
+author: 'naiba'
 
 branding:
   # https://actions-cool.github.io/github-action-branding/
@@ -14,8 +14,8 @@ inputs:
     default: ${{ github.token }}
     required: true
     
-  ding_talk_token:
-    description: 'dingtalk web hook token'
+  feishu_bot_token:
+    description: 'feishu custom bot token'
     required: true
 
   repo_url:

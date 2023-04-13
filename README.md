@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: lijinke666/ding-talk-pr-notify@main
         with:
-          ding_talk_token: ${{ secrets.DING_TALK_ACCESS_TOKEN}}  # 钉钉 webhook token (必填)
+          feishu_bot_token: ${{ secrets.DING_TALK_ACCESS_TOKEN}}  # 钉钉 webhook token (必填)
           at_all: true  # 是否@所有人 (可选)
           extra_content: '' # 额外的文本内容 (可选)
 ```
