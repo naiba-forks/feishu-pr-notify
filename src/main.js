@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const fetch = require('node-fetch');
 
 async function feishuBotSendText(token, content) {
   const url = 'https://open.feishu.cn/open-apis/bot/v2/hook/' + token;

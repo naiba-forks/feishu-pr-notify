@@ -10516,6 +10516,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
+const fetch = __nccwpck_require__(467);
 
 async function feishuBotSendText(token, content) {
   const url = 'https://open.feishu.cn/open-apis/bot/v2/hook/' + token;
